@@ -180,42 +180,9 @@
 <p>国外有有篇文章讲解了这个概念，本人参考了一下，见<a href="http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/" target="_blank" rel="noopener">http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/</a></p>
 <p>文章中频繁提到beans的概念，这个概念非常重要，我推荐<a href="https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。" target="_blank" rel="noopener">https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。</a></p>
 <p>最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注解，在这里记录下来。</p>
-<h1 id="什么是Bean"><a href="#什么是Bean" class="headerlink" title="什么是Bean?"></a>什么是Bean?</h1><p>这个问题很基础，很多地方都不会写这个概念而是直接使用。我现在给出我的理解。</p>
-<p>Spring需要调用我们写的方法，而普通的类无法直接使用，必须实例化对象，Spring如何知道这个类是不是需要被实例化以用于Spring对我们所写代码的整合呢？你需要给出元信息，我们可以用xml给出信息，但是用注解给出信息更方便。这种信息注入的思想，来自于Spring大名鼎鼎的重要设计思想之一——<strong>控制反转（Inversion of Control）</strong>即IOC，所以更深入理解，就要涉及到很多设计模式的概念和反射获取元信息的的技巧了！Spring的精华就在于此。</p>
-<p>而这个被注册进Spring里的类或者方法，就是Bean！</p>
-<p>对于Bean的操作，Spring有两种，<strong>拿到一个Bean（注册）或者给出一个Bean（使用）</strong></p>
-<p>有时候你的类需要Spring运行时使用其他类配合，这时候就需要给出一个Bean，有时候你的类需要上交给Spring管理，这时候就需要注册一个Bean，你都需要通过一个注解标注这个类，这样Spring就可以通过类扫描的方式看到你的注解，并得知相关信息！<em>(auto-detection using classpath scanning)</em></p>
-<p>所以其实这些相关注解可以对应的分为两种，注册型注解与使用型注解。理解了这个概念，再理解下面注解的作用就轻而易举了！</p>
-<h2 id="Component（-Controller、-Service、-Repository）"><a href="#Component（-Controller、-Service、-Repository）" class="headerlink" title="@Component（@Controller、@Service、@Repository）"></a>@Component（@Controller、@Service、@Repository）</h2><p>@Component注解表明一个类会作为组件类，并告知Spring要为这个类创建bean。</p>
-<p>@Controller、@Service、@Repository是@Component的特化，他们效果其实差不多，在很多地方可以相互替换，具体差别有待探索。</p>
-<h2 id="Bean"><a href="#Bean" class="headerlink" title="@Bean"></a>@Bean</h2><p>@Bean注解告诉Spring这个方法将会返回一个对象，这个对象要注册为Spring应用上下文中的bean。通常方法体中包含了最终产生bean实例的逻辑。</p>
-<hr>
-<p>两者的目的是一样的，都是注册bean到Spring容器中。</p>
-<p>也就是，他们都是用于注册的注解。</p>
-<p>@Component（@Controller、@Service、@Repository）通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中。</p>
-<p>而@Bean注解通常是我们在标有该注解的方法中定义产生这个bean的逻辑。</p>
-<p>我们举例子来说明他们的不同。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//在这里用Component，Controller，Service，Repository都可以起到相同的作用。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@RequestMapping</span>(″/web/controller1″)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebController</span> </span>&#123;</span><br><span class="line">    .....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对于普通的Web Controller，他们效果相同。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function">CommandLineRunner <span class="title">commandLineRunner</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">	<span class="keyword">return</span> args -&gt; System.out.println(<span class="keyword">this</span>.articalMapper.findAll());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>CommandLineRunner是一个函数式编程接口，他可以做到在运行App的初始化时同时执行在这里编写的run方法，进行一些业务上的处理或者是测试等等。</p>
-<p>在这里使用Bean，提示SpringApplication把这个lambda方法加载进入容器。</p>
-<p>其他注解大同小异，只要记住他们的用途就好了！</p>
-<h2 id="其他注解一览"><a href="#其他注解一览" class="headerlink" title="其他注解一览"></a>其他注解一览</h2><h3 id="SpringBootApplication"><a href="#SpringBootApplication" class="headerlink" title="@SpringBootApplication"></a>@SpringBootApplication</h3><p>声明让SpringBoot进行自动配置，用于注解类</p>
-<blockquote>
-<p>@SpringBootApplication=@Configuration+@EnableAutoConfiguration+@ComponentScan4</p>
-</blockquote>
-<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="@Configuration"></a>@Configuration</h3><p>声明项目的配置类</p>
-<h3 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h3><p>用于自动配置</p>
-<h3 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h3><p>用于自动发现和装配bean</p>
-<h3 id="Autowired和-Inject"><a href="#Autowired和-Inject" class="headerlink" title="@Autowired和@Inject"></a>@Autowired和@Inject</h3><p>两个注解都用来自动导入依赖的bean，只是@Inject注解没有required属性</p>
-<h3 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h3><p>提供路由信息，负责URL到Controller中的具体函数的映射</p>
-<h3 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a>@RestController</h3><p>用于标注控制层组件(如struts中的action),@RestController=@ResponseBody+@Controller</p>
-<h3 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a>@ResponseBody</h3><p>将返回结果写入HTTP response body，用于注解方法，一般在异步获取数据时使用，用于构建RESTful的api。不加@ResponseBody时，返回结果解析为路径跳转</p>
-<h3 id="Qualifier"><a href="#Qualifier" class="headerlink" title="@Qualifier"></a>@Qualifier</h3><p>与@Autowired配合使用，当有多个同一类型的bean时，可以用@Qualifier(“name”)来指定。</p>
-
+        
+          <a class="article-more-a" href="2019/08/10/SpringBoot注解学习-一/#more">more >></a>
+        
       
 
       

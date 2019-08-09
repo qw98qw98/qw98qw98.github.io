@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="无拘">
 <meta property="og:description" content="本文章有部分参考于https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。 国外有有篇文章讲解了这个概念，本人参考了一下，见http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/ 文章中频繁提到beans的概念，这个概念非常重要，我推荐https://blog">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T20:10:16.884Z">
+<meta property="og:updated_time" content="2019-08-09T20:14:28.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot注解学习(一)">
 <meta name="twitter:description" content="本文章有部分参考于https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。 国外有有篇文章讲解了这个概念，本人参考了一下，见http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/ 文章中频繁提到beans的概念，这个概念非常重要，我推荐https://blog">
@@ -179,6 +179,8 @@
 <p>国外有有篇文章讲解了这个概念，本人参考了一下，见<a href="http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/" target="_blank" rel="noopener">http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/</a></p>
 <p>文章中频繁提到beans的概念，这个概念非常重要，我推荐<a href="https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。" target="_blank" rel="noopener">https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。</a></p>
 <p>最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注解，在这里记录下来。</p>
+<a id="more"></a>
+
 <h1 id="什么是Bean"><a href="#什么是Bean" class="headerlink" title="什么是Bean?"></a>什么是Bean?</h1><p>这个问题很基础，很多地方都不会写这个概念而是直接使用。我现在给出我的理解。</p>
 <p>Spring需要调用我们写的方法，而普通的类无法直接使用，必须实例化对象，Spring如何知道这个类是不是需要被实例化以用于Spring对我们所写代码的整合呢？你需要给出元信息，我们可以用xml给出信息，但是用注解给出信息更方便。这种信息注入的思想，来自于Spring大名鼎鼎的重要设计思想之一——<strong>控制反转（Inversion of Control）</strong>即IOC，所以更深入理解，就要涉及到很多设计模式的概念和反射获取元信息的的技巧了！Spring的精华就在于此。</p>
 <p>而这个被注册进Spring里的类或者方法，就是Bean！</p>
