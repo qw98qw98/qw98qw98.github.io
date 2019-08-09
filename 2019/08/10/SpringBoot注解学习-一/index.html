@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>SpringBoot注解学习(一) | 无拘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文章有部分参考于https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。 国外有有篇文章讲解了这个概念，本人参考了一下，见http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/ 文章中频繁提到beans的概念，这个概念非常重要，我推荐https://blog">
+  <meta name="description" content="最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注">
 <meta name="keywords" content="SpringBoot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot注解学习(一)">
 <meta property="og:url" content="http://yoursite.com/2019/08/10/SpringBoot注解学习-一/index.html">
 <meta property="og:site_name" content="无拘">
-<meta property="og:description" content="本文章有部分参考于https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。 国外有有篇文章讲解了这个概念，本人参考了一下，见http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/ 文章中频繁提到beans的概念，这个概念非常重要，我推荐https://blog">
+<meta property="og:description" content="最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T20:14:28.975Z">
+<meta property="og:updated_time" content="2019-08-09T20:15:20.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot注解学习(一)">
-<meta name="twitter:description" content="本文章有部分参考于https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。 国外有有篇文章讲解了这个概念，本人参考了一下，见http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/ 文章中频繁提到beans的概念，这个概念非常重要，我推荐https://blog">
+<meta name="twitter:description" content="最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注">
   
     <link rel="alternative" href="/atom.xml" title="无拘" type="application/atom+xml">
   
@@ -175,10 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文章有部分参考于<a href="https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。" target="_blank" rel="noopener">https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。</a></p>
-<p>国外有有篇文章讲解了这个概念，本人参考了一下，见<a href="http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/" target="_blank" rel="noopener">http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/</a></p>
-<p>文章中频繁提到beans的概念，这个概念非常重要，我推荐<a href="https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。" target="_blank" rel="noopener">https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。</a></p>
-<p>最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注解，在这里记录下来。</p>
+        <p>最近正在学习Vue+Restful接口结合实现一个简单的前后端分离式的Web小项目，在Vue项目写到一半的时候，决定开始进行相关接口的编写。技术选型上我采用SpringBoot+Mybatis+Mysql作为后端方案.期间遇到了很多坑，开始打算采用xml方式编写Mybatis映射，频频报错，遂决定采用现在开发最方便的全注解模式进行开发，这也是Mybatis官方示例文件中的示例方案。期间遇到好几个注解，在这里记录下来。</p>
 <a id="more"></a>
 
 <h1 id="什么是Bean"><a href="#什么是Bean" class="headerlink" title="什么是Bean?"></a>什么是Bean?</h1><p>这个问题很基础，很多地方都不会写这个概念而是直接使用。我现在给出我的理解。</p>
@@ -216,6 +213,9 @@
 <h3 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a>@RestController</h3><p>用于标注控制层组件(如struts中的action),@RestController=@ResponseBody+@Controller</p>
 <h3 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a>@ResponseBody</h3><p>将返回结果写入HTTP response body，用于注解方法，一般在异步获取数据时使用，用于构建RESTful的api。不加@ResponseBody时，返回结果解析为路径跳转</p>
 <h3 id="Qualifier"><a href="#Qualifier" class="headerlink" title="@Qualifier"></a>@Qualifier</h3><p>与@Autowired配合使用，当有多个同一类型的bean时，可以用@Qualifier(“name”)来指定。</p>
+<p>本文章有部分参考于<a href="https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。" target="_blank" rel="noopener">https://www.jianshu.com/p/3fbfbb843b63，感谢作者分享知识。</a></p>
+<p>国外有有篇文章讲解了这个概念，本人参考了一下，见<a href="http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/" target="_blank" rel="noopener">http://www.tomaszezula.com/2014/02/09/spring-series-part-5-component-vs-bean/</a></p>
+<p>文章中频繁提到beans的概念，这个概念非常重要，我推荐<a href="https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。" target="_blank" rel="noopener">https://blog.csdn.net/u014590757/article/details/79998914这篇文章，有新手不懂可以学习。</a></p>
 
       
 
