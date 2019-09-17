@@ -156,6 +156,300 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Vue学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2019/09/17/Vue学习笔记/">Vue学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="2019/09/17/Vue学习笔记/" class="archive-article-date">
+  	<time datetime="2019-09-17T14:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="V-on"><a href="#V-on" class="headerlink" title="V-on"></a>V-on</h1><h5 id="简写-V-on"><a href="#简写-V-on" class="headerlink" title="简写 V-on @"></a>简写 V-on @</h5><h2 id="Vue-v-on参数传递"><a href="#Vue-v-on参数传递" class="headerlink" title="Vue v-on参数传递"></a>Vue v-on参数传递</h2><ul>
+<li><p>无参函数</p>
+<ul>
+<li>加不加括号都可以调用</li>
+</ul>
+</li>
+<li><p>有参函数</p>
+<ul>
+<li>不加括号传递事件作为第一个参数</li>
+<li>加了括号就根据实际内容传递参数，不写参数就一个不传</li>
+<li>没有传入参数却在函数里调用了参数，参数的值是undefined</li>
+<li>加了括号后想要传递事件可以用$enent来表示一个监听事件
+        
+          <a class="article-more-a" href="2019/09/17/Vue学习笔记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="2019/09/17/Vue学习笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Vue学习笔记-Webpack-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2019/09/17/Vue学习笔记-Webpack-3/">Vue学习笔记-Webpack</a>
+    </h1>
+  
+
+        
+        <a href="2019/09/17/Vue学习笔记-Webpack-3/" class="archive-article-date">
+  	<time datetime="2019-09-17T14:01:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h1><h2 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack?"></a>什么是Webpack?</h2><p><strong>从本质上来讲，webpack是一个现代的JavaScript应用的静态模块打包的工具。</strong></p>
+<p>​        浏览器不能执行但是程序员喜欢使用的代码—&gt;转化—&gt;浏览器认识的代码</p>
+<p>​        打包工具有很多:grunt/gulp/webpack/rollup ……gulp不支持模块化开发</p>
+<p>​        Webpack可以把各种前端模块化方案中的导入导出方式,ES6语法都进行转化，最终打包为浏览器支持的代码。css 图片 json文件都可以在Webpack中被当作模块来使用，非常强大。</p>
+<h2 id="Webpack的配置"><a href="#Webpack的配置" class="headerlink" title="Webpack的配置"></a>Webpack的配置</h2><h3 id="配置webpack命令"><a href="#配置webpack命令" class="headerlink" title="配置webpack命令"></a>配置webpack命令</h3><p>文件夹默认名称:webpack.config.js</p>
+<p>在里面使用如下命令，配置webpack命令即可方便快速启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module,exports=&#123;</span><br><span class="line">	entry:&quot;入口js&quot;</span><br><span class="line">	output:&#123;</span><br><span class="line">	  path:</span><br><span class="line">	  filename:</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        如果要采用node的内容，先使用npm init自动创建packge.json文件夹，通过修改scripts里面的命令可以进行cmd映射，运行时会优先使用使用本地的webpack文件即开发时依赖十分方便。</p>
+<p>​        配置开发时webpack的时候要npm install webpack –save-dev</p>
+<p>​        动态获取路径可以导入node里的path,使用path.resolve(__dirname,”dist”)即可自动拼接出绝对路径。</p>
+<h2 id="WebpackLoader"><a href="#WebpackLoader" class="headerlink" title="WebpackLoader"></a>WebpackLoader</h2><p>loader是webpack拓展的意思，安装对应的Loader可以让webpack执行复杂的操作，比如es6-es5转化 ts-js转化等等。</p>
+<p><strong>使用方法</strong>:</p>
+<ol>
+<li>通过npm下载loader</li>
+<li>通过配置webpack.comfig.js文件使得webpack可以使用loader</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="2019/09/17/Vue学习笔记-Webpack-3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Vue学习笔记-组件化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2019/09/17/Vue学习笔记-组件化/">Vue学习笔记-组件化</a>
+    </h1>
+  
+
+        
+        <a href="2019/09/17/Vue学习笔记-组件化/" class="archive-article-date">
+  	<time datetime="2019-09-17T14:00:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue-组件化"><a href="#Vue-组件化" class="headerlink" title="Vue-组件化"></a>Vue-组件化</h1><ul>
+<li><h3 id="Vue提供了一种抽象-让我们可以开发出一个个独立可复用的小组件来构造我们的应用。"><a href="#Vue提供了一种抽象-让我们可以开发出一个个独立可复用的小组件来构造我们的应用。" class="headerlink" title="Vue提供了一种抽象,让我们可以开发出一个个独立可复用的小组件来构造我们的应用。"></a>Vue提供了一种抽象,让我们可以开发出一个个独立可复用的小组件来构造我们的应用。</h3></li>
+<li><h3 id="任何的应用都会被抽象成一颗组件树。"><a href="#任何的应用都会被抽象成一颗组件树。" class="headerlink" title="任何的应用都会被抽象成一颗组件树。"></a>任何的应用都会被抽象成一颗组件树。</h3></li>
+</ul>
+<h2 id="注册组件"><a href="#注册组件" class="headerlink" title="注册组件"></a>注册组件</h2><ul>
+<li><h5 id="创建组件构造器"><a href="#创建组件构造器" class="headerlink" title="创建组件构造器"></a>创建组件构造器</h5><ul>
+<li>Vue.extend方法创建组建构造器
+        
+          <a class="article-more-a" href="2019/09/17/Vue学习笔记-组件化/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="2019/09/17/Vue学习笔记-组件化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring-IoC学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2019/09/17/Spring-IoC学习/">Spring-IoC学习</a>
+    </h1>
+  
+
+        
+        <a href="2019/09/17/Spring-IoC学习/" class="archive-article-date">
+  	<time datetime="2019-09-17T13:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Spring-IoC-Invert-of-Control-控制反转"><a href="#Spring-IoC-Invert-of-Control-控制反转" class="headerlink" title="Spring IoC(Invert of Control)控制反转"></a>Spring IoC(Invert of Control)控制反转</h1><p>实例化方式</p>
+<p>默认构造</p>
+<p>静态工厂</p>
+<p>实例工厂</p>
+        
+          <a class="article-more-a" href="2019/09/17/Spring-IoC学习/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="2019/09/17/Spring-IoC学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-版本迭代开发常见标签一览" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

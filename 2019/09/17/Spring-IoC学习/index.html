@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>版本迭代开发常见标签一览 | 无拘</title>
+  <title>Spring-IoC学习 | 无拘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Alpha：是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。Beta：也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。RC：(Release　Candidate) 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。GA:General Availability,正式发布的版本，在国外都是用GA">
+  <meta name="description" content="Spring IoC(Invert of Control)控制反转实例化方式 默认构造 静态工厂 实例工厂">
 <meta name="keywords" content="IT,Java,Javascript,Vue,技术,后端,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="版本迭代开发常见标签一览">
-<meta property="og:url" content="http://yoursite.com/2019/08/11/版本迭代开发常见标签一览/index.html">
+<meta property="og:title" content="Spring-IoC学习">
+<meta property="og:url" content="http://yoursite.com/2019/09/17/Spring-IoC学习/index.html">
 <meta property="og:site_name" content="无拘">
-<meta property="og:description" content="Alpha：是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。Beta：也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。RC：(Release　Candidate) 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。GA:General Availability,正式发布的版本，在国外都是用GA">
+<meta property="og:description" content="Spring IoC(Invert of Control)控制反转实例化方式 默认构造 静态工厂 实例工厂">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T05:14:59.885Z">
+<meta property="og:updated_time" content="2019-09-17T13:59:26.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="版本迭代开发常见标签一览">
-<meta name="twitter:description" content="Alpha：是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。Beta：也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。RC：(Release　Candidate) 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。GA:General Availability,正式发布的版本，在国外都是用GA">
+<meta name="twitter:title" content="Spring-IoC学习">
+<meta name="twitter:description" content="Spring IoC(Invert of Control)控制反转实例化方式 默认构造 静态工厂 实例工厂">
   
     <link rel="alternative" href="/atom.xml" title="无拘" type="application/atom+xml">
   
@@ -155,27 +155,133 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-版本迭代开发常见标签一览" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Spring-IoC学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      版本迭代开发常见标签一览
+      Spring-IoC学习
     </h1>
   
 
         
         <a href="" class="archive-article-date">
-  	<time datetime="2019-08-11T05:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
+  	<time datetime="2019-09-17T13:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Alpha：是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。<br>Beta：也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。<br>RC：(Release　Candidate) 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。<br>GA:General Availability,正式发布的版本，在国外都是用GA来说明<a href="https://www.baidu.com/s?wd=release版本&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">release版本</a>的。<br>RTM：(Release to Manufacture)是给工厂大量压片的版本，内容跟正式版是一样的，不过RTM版也有出限制、评估版的。但是和正式版本的主要程序代码都是一样的。<br>OEM：是给计算机厂商随着计算机贩卖的，也就是随机版。只能随机器出货，不能零售。只能全新安装，不能从旧有<a href="https://www.baidu.com/s?wd=操作系统&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">操作系统</a>升级。包装不像零售版精美，通常只有一面CD和说明书(授权书)。<br>RVL：号称是正式版，其实RVL根本不是版本的名称。它是中文版/英文版文档破解出来的。<br>EVAL：而流通在网络上的EVAL版，与“评估版”类似，功能上和零售版没有区别。<br>RTL：Retail(零售版)是真正的正式版，正式上架零售版。在安装盘的<a href="https://www.baidu.com/s?wd=i386&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">i386</a>文件夹里有一个eula.txt，最后有一行EULAID，就是你的版本。比如简体中文正式版是EULAID:WX.4_PRO_RTL_CN，<a href="https://www.baidu.com/s?wd=繁体中文&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">繁体中文</a>正式版是WX.4_PRO_RTL_TW。其中：如果是WX.开头是正式版，WB.开头是测试版。_PRE，代表家庭版；_PRO，代表专业版。<br>α、β、λ常用来表示<a href="https://www.baidu.com/s?wd=软件测试&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">软件测试</a>过程中的三个阶段，α是第一阶段，一般只供内部测试使用；β是第二个阶段，已经消除了软件中大部分的不完善之处，但仍有可能还存在缺陷和漏洞，一般只提供给特定的用户群来测试使用；λ是第三个阶段，此时产品已经相当成熟，只需在个别地方再做进一步的优化处理即可上市发行。</p>
+        <h1 id="Spring-IoC-Invert-of-Control-控制反转"><a href="#Spring-IoC-Invert-of-Control-控制反转" class="headerlink" title="Spring IoC(Invert of Control)控制反转"></a>Spring IoC(Invert of Control)控制反转</h1><p>实例化方式</p>
+<p>默认构造</p>
+<p>静态工厂</p>
+<p>实例工厂</p>
+<a id="more"></a>
+
+<p>默认构造例子:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userServiceId"</span> <span class="attr">class</span>=<span class="string">"com.hhr.a_ioc.UserServiceImpl"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="静态工厂"><a href="#静态工厂" class="headerlink" title="静态工厂"></a>静态工厂</h1><p>常用于spring整合其他框架</p>
+<ul>
+<li><p>用于生成实例对象，所有的方法都是static方法</p>
+<p>语法</p>
+<p>关键就是factory-method </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"工厂全限定类名"</span> <span class="attr">factory-method</span>=<span class="string">"静态方法"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>静态方法就是静态工厂返回对象的那个方法.</p>
+</li>
+</ul>
+<h1 id="实例工厂"><a href="#实例工厂" class="headerlink" title="实例工厂"></a>实例工厂</h1><p>必须有工厂的实例对象，通过实例对象创建对象。提供的所有方法都是非静态的。</p>
+<p>语法</p>
+<p>创建工厂实例</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myBeanFacoryId"</span> <span class="attr">class</span>=<span class="string">"com.hhr.inject.factory.MyBeanFactory"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过工厂实例进行对象的创建</p>
+<p>factory-bean指工厂类的id</p>
+<p>factory-method指工厂实例创建对象的方法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userServiceId"</span> <span class="attr">factory-bean</span>=<span class="string">"myBeanFacoryId"</span> <span class="attr">factory-method</span>=<span class="string">"createService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Bean种类"><a href="#Bean种类" class="headerlink" title="Bean种类"></a>Bean种类</h1><ul>
+<li>普通Bean</li>
+<li>FactoryBean：特殊的Bean，具有工厂生成对象能力。只能生产特定的对象</li>
+</ul>
+<p>Bean只能实现FactoryBean接口，接口提供getObject()方法用于获得特定bean。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">'FB'</span>&gt;</span>先创建FB实例，调用getObject()方法，返回方法的返回值。</span><br></pre></td></tr></table></figure>
+
+<p>BeanFactory:工厂用于生产任意bean</p>
+<p>FactoryBean:特殊Bean，用于生成另一个特定的bean.</p>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><ul>
+<li>singleton    单例</li>
+<li>prototype   多例</li>
+<li>request</li>
+<li>session</li>
+<li>globalsession</li>
+</ul>
+<p>scope属性对应的五个选择，常用第一个第二个。</p>
+<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><p>一共有十一个步骤。</p>
+<ol>
+<li><p>初始化和销毁</p>
+<p>目标方法执行前执行后，将执行初始化或销毁</p>
+<p>init-method,destroy-method </p>
+<p>拓展一下:</p>
+<p><beans default-init-method>可以写默认方法</beans></p>
+<p>实现InitializingBean,DisposableBean接口优先级更高。</p>
+<p>销毁方法在容器销毁的时候执行。</p>
+</li>
+<li><p>BeanPostProcessor 后处理Bean</p>
+<p>Spring提供一种机制，只要实现了某些接口并将实现类提供给spring容器,spring容器将自动执行，在初始化方法前执行before,在初始化方法后执行after.</p>
+<p>Spring提供工厂钩子，用于修改实例对象，可以生成代理对象，是AOP底层。</p>
+<p>有代理就有AOP。</p>
+<p>将实例对象传递给后处理bean，可以生成代理对象并返回。</p>
+</li>
+</ol>
+<h1 id="Setter方法注入"><a href="#Setter方法注入" class="headerlink" title="Setter方法注入"></a>Setter方法注入</h1><p>普通数据 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">value</span>&gt;</span>1234<span class="tag">&lt;/<span class="name">value</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>引用数据</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">ref</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">也可以</span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">""</span>/&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="构造器注入-集合注入"><a href="#构造器注入-集合注入" class="headerlink" title="构造器注入 集合注入"></a>构造器注入 集合注入</h1><p>略</p>
+<h1 id="注解式开发"><a href="#注解式开发" class="headerlink" title="注解式开发"></a>注解式开发</h1><p>使用了AOP的包内容，需要导入AOP的包</p>
+<h5 id="1-加命名空间，让spring对注解进行扫描"><a href="#1-加命名空间，让spring对注解进行扫描" class="headerlink" title="1.加命名空间，让spring对注解进行扫描"></a>1.加命名空间，让spring对注解进行扫描</h5><p>   默认:xmlns=””</p>
+<p>   显式：xmlns:别名=””</p>
+<p>   在xml配置里把contextXML复制进来，加入进约束</p>
+<p>   默认命名空间：–&gt;<bean></bean></p>
+<p>   显示命名空间:–&gt; &lt;别名：标签名&gt;</p>
+<p>   2.确定schema xsd位文件位置</p>
+<p>   xsl:shemaLocation=”名称 位置 名称 位置”</p>
+<p>   ​    @Component(“Name”)</p>
+<p>   在配置文件里加入扫描路径</p>
+   <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"..."</span>&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-Web开发-提供3个-Component注解衍生注解"><a href="#2-Web开发-提供3个-Component注解衍生注解" class="headerlink" title="2. Web开发 提供3个@Component注解衍生注解"></a>2. Web开发 提供3个@Component注解衍生注解</h5><p>   @Repository(“Name”)</p>
+<p>   @Service(“Name”)</p>
+<p>   @Controller(“Name”)</p>
+<h5 id="3-依赖注入-【给私有字段或者Setter方法注入】"><a href="#3-依赖注入-【给私有字段或者Setter方法注入】" class="headerlink" title="3. 依赖注入 【给私有字段或者Setter方法注入】"></a>3. 依赖注入 【给私有字段或者Setter方法注入】</h5><p>普通值@Value(“”)</p>
+<p>引用值：<br>方式一：按照类型注入</p>
+<p>​                @Autowired</p>
+<p>方式二：按照名称注入1</p>
+<p>​                @Autowired</p>
+<p>​                @Qualifier（“Name”）</p>
+<p>方式三：按照名称注入2</p>
+<p>​                @Resource(“Name”)</p>
+<p>​                跟上面一样</p>
+<ol start="4">
+<li>生命周期</li>
+</ol>
+<p>​         初始化：@PostConstruct</p>
+<p>​         销毁：@PreDestroy</p>
+<ol start="5">
+<li>作用域<br>​    @Scope(“prototype”)</li>
+</ol>
 
       
 
@@ -260,7 +366,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/11/版本迭代开发常见标签一览/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/17/Spring-IoC学习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -274,18 +380,18 @@
   
 <nav id="article-nav">
   
-    <a href="../../../09/17/Spring-IoC学习/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../Vue学习笔记-组件化/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Spring-IoC学习
+          Vue学习笔记-组件化
         
       </div>
     </a>
   
   
-    <a href="../../10/SpringBoot注解学习-一/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SpringBoot注解学习(一)</div>
+    <a href="../../../08/11/版本迭代开发常见标签一览/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">版本迭代开发常见标签一览</div>
       <i class="icon-circle-right"></i>
     </a>
   
