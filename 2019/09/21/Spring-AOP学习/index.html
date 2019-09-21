@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue学习笔记 | 无拘</title>
+  <title>Spring-AOP学习 | 无拘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="V-on简写 V-on @Vue v-on参数传递 无参函数  加不加括号都可以调用   有参函数  不加括号传递事件作为第一个参数 加了括号就根据实际内容传递参数，不写参数就一个不传 没有传入参数却在函数里调用了参数，参数的值是undefined 加了括号后想要传递事件可以用$enent来表示一个监听事件">
+  <meta name="description" content="Spring-AOP学习什么是AOP？AOP的实现原理？JDK动态代理，CGLIB代理，工厂Bean创建代理，传统SpringAOPAOP的术语？ AOP介绍 什么是AOP 面向切面编程，通过预编译方式和*运行期动态代理*实现程序功能的统一维护的一种技术，是OOP的延续，降低耦合度、提高可重用性，隔离 业务逻辑，提高开发效率！ aop的底层将采用代理机制进行实现。 采用横向抽取取代了纵向继承。">
 <meta name="keywords" content="IT,Java,Javascript,Vue,技术,后端,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/09/17/Vue学习笔记/index.html">
+<meta property="og:title" content="Spring-AOP学习">
+<meta property="og:url" content="http://yoursite.com/2019/09/21/Spring-AOP学习/index.html">
 <meta property="og:site_name" content="无拘">
-<meta property="og:description" content="V-on简写 V-on @Vue v-on参数传递 无参函数  加不加括号都可以调用   有参函数  不加括号传递事件作为第一个参数 加了括号就根据实际内容传递参数，不写参数就一个不传 没有传入参数却在函数里调用了参数，参数的值是undefined 加了括号后想要传递事件可以用$enent来表示一个监听事件">
+<meta property="og:description" content="Spring-AOP学习什么是AOP？AOP的实现原理？JDK动态代理，CGLIB代理，工厂Bean创建代理，传统SpringAOPAOP的术语？ AOP介绍 什么是AOP 面向切面编程，通过预编译方式和*运行期动态代理*实现程序功能的统一维护的一种技术，是OOP的延续，降低耦合度、提高可重用性，隔离 业务逻辑，提高开发效率！ aop的底层将采用代理机制进行实现。 采用横向抽取取代了纵向继承。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-17T14:05:47.280Z">
+<meta property="og:updated_time" content="2019-09-21T10:35:24.850Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue学习笔记">
-<meta name="twitter:description" content="V-on简写 V-on @Vue v-on参数传递 无参函数  加不加括号都可以调用   有参函数  不加括号传递事件作为第一个参数 加了括号就根据实际内容传递参数，不写参数就一个不传 没有传入参数却在函数里调用了参数，参数的值是undefined 加了括号后想要传递事件可以用$enent来表示一个监听事件">
+<meta name="twitter:title" content="Spring-AOP学习">
+<meta name="twitter:description" content="Spring-AOP学习什么是AOP？AOP的实现原理？JDK动态代理，CGLIB代理，工厂Bean创建代理，传统SpringAOPAOP的术语？ AOP介绍 什么是AOP 面向切面编程，通过预编译方式和*运行期动态代理*实现程序功能的统一维护的一种技术，是OOP的延续，降低耦合度、提高可重用性，隔离 业务逻辑，提高开发效率！ aop的底层将采用代理机制进行实现。 采用横向抽取取代了纵向继承。">
   
     <link rel="alternative" href="/atom.xml" title="无拘" type="application/atom+xml">
   
@@ -155,101 +155,420 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Spring-AOP学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue学习笔记
+      Spring-AOP学习
     </h1>
   
 
         
         <a href="" class="archive-article-date">
-  	<time datetime="2019-09-17T14:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+  	<time datetime="2019-09-21T10:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="V-on"><a href="#V-on" class="headerlink" title="V-on"></a>V-on</h1><h5 id="简写-V-on"><a href="#简写-V-on" class="headerlink" title="简写 V-on @"></a>简写 V-on @</h5><h2 id="Vue-v-on参数传递"><a href="#Vue-v-on参数传递" class="headerlink" title="Vue v-on参数传递"></a>Vue v-on参数传递</h2><ul>
-<li><p>无参函数</p>
-<ul>
-<li>加不加括号都可以调用</li>
-</ul>
-</li>
-<li><p>有参函数</p>
-<ul>
-<li>不加括号传递事件作为第一个参数</li>
-<li>加了括号就根据实际内容传递参数，不写参数就一个不传</li>
-<li>没有传入参数却在函数里调用了参数，参数的值是undefined</li>
-<li>加了括号后想要传递事件可以用$enent来表示一个监听事件<a id="more"></a>
-
-</li>
+        <h1 id="Spring-AOP学习"><a href="#Spring-AOP学习" class="headerlink" title="Spring-AOP学习"></a>Spring-AOP学习</h1><p>什么是AOP？<br>AOP的实现原理？JDK动态代理，CGLIB代理，工厂Bean创建代理，传统SpringAOP<br>AOP的术语？</p>
+<h4 id="AOP介绍"><a href="#AOP介绍" class="headerlink" title="AOP介绍"></a>AOP介绍</h4><ul>
+<li>什么是AOP<ul>
+<li><em>面向切面编程，通过预编译方式和*</em>运行期动态代理*<em>实现程序功能的统一维护的一种技术</em>，是OOP的延续，降低耦合度、提高可重用性，隔离 业务逻辑，提高开发效率！<ul>
+<li>aop的底层将采用代理机制进行实现。</li>
+<li>采用<strong>横向抽取</strong>取代了纵向继承。 </li>
+<li>经典应用：事务管理、性能监视、安全检查、缓存、日志。</li>
+<li>Spring AOP 使用纯Java实现，不需要专门的编译过程和类加载器，在运行期通过代理方式向目标织入增强代码。</li>
+<li>AspectJ是一个基于Java的AOP框架，从Spring2.0开始，SpringAOP开始引入对Aspect的支持，它拓展了Java语言，提供了一个专门的编译器，在编译时提供横向代码的织入。</li>
 </ul>
 </li>
 </ul>
-<h2 id="v-on修饰符"><a href="#v-on修饰符" class="headerlink" title="v-on修饰符"></a>v-on修饰符</h2><ul>
-<li>.stop 阻止事件冒泡</li>
-<li>.prevent 阻止默认行为（如submit）</li>
-<li>@keyup\其他键盘事件 监听键盘事件 .enter监听回车 .键代码 监听相应键盘</li>
-<li>@.once 只触发一次回调</li>
+</li>
+<li>实现原理<ul>
+<li>aop的底层将采用代理机制进行实现。</li>
+<li>接口 + 实现类: Spring采用jdk动态代理proxy实现。</li>
+<li>实现类：spring采用CGLIB字节码增强。</li>
 </ul>
-<h1 id="V-for"><a href="#V-for" class="headerlink" title="V -for"></a>V -for</h1><ul>
-<li><h5 id="对于数组-item-index-表示值-索引"><a href="#对于数组-item-index-表示值-索引" class="headerlink" title="对于数组 (item,index)表示值,索引"></a>对于数组 (item,index)表示值,索引</h5></li>
-<li><h5 id="对于对象-value-key-index-表示值-键-索引"><a href="#对于对象-value-key-index-表示值-键-索引" class="headerlink" title="对于对象 (value,key,index))表示值,键,索引"></a>对于对象 (value,key,index))表示值,键,索引</h5></li>
-</ul>
-<h3 id="哪些数组的方法是响应式的"><a href="#哪些数组的方法是响应式的" class="headerlink" title="哪些数组的方法是响应式的"></a>哪些数组的方法是响应式的</h3><p>Vue是响应式框架，会根据数据的刷新自动是更新Dom，当我们更新数组的时候V-for会自动更新dom数据，哪些的方法是响应式的呢?</p>
-<ul>
-<li><p>push()</p>
 </li>
-<li><p>pop()</p>
-</li>
-<li><p>shift()</p>
-</li>
-<li><p>unshift()</p>
-</li>
-<li><p>splice()</p>
-</li>
-<li><p>sort()</p>
-</li>
-<li><p>reverse()</p>
-</li>
-<li><p>Vue.set(obj,index,var)</p>
-</li>
-</ul>
-<h1 id="过滤器语法"><a href="#过滤器语法" class="headerlink" title="过滤器语法"></a>过滤器语法</h1><h4 id="过滤器-filters"><a href="#过滤器-filters" class="headerlink" title="过滤器: filters"></a>过滤器: filters</h4><p>​    在Vue中可以定义filters属性,在内部可以写函数对mustache语法进行修饰,语法与Linux语法相同.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">filters:&#123; </span><br><span class="line">showPrice(book)&#123;  </span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Number</span>(book.price.substring(<span class="number">1</span>)).toFixed(<span class="number">2</span>); </span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="Javascript-For语法"><a href="#Javascript-For语法" class="headerlink" title="Javascript For语法"></a>Javascript For语法</h1><ol>
-<li>普通的for循环<br>for(let x=0;x&gt;0;x++)</li>
-<li>for (let x in this.books) :<strong>i为索引</strong></li>
-<li>for(let item of this.book):<strong>item为数组内的对象</strong></li>
+<li>术语<ol>
+<li>Target：目标类，需要被代理的类。</li>
+<li>JoinPoint：连接点，所谓连接点就是指那些可能被拦截的点（方法）。</li>
+<li>PointCut：切入点，已经被增强的连接点。 </li>
+<li>Advice：通知/增强。拦截到JoinPoint之后要做的事。After，before等。</li>
+<li>Weaving：织入，把增强advice应用到目标对象target来创建新的代理对象proxy的过程。</li>
+<li>proxy：代理对象。</li>
+<li>Aspect：切面，是切入点PointCut和通知Advice的结合。<br>一个切入点和一个通知，组成一个特殊的面。<h4 id="手动代理"><a href="#手动代理" class="headerlink" title="手动代理"></a>手动代理</h4></li>
 </ol>
-<h2 id="Js函数式编程"><a href="#Js函数式编程" class="headerlink" title="Js函数式编程"></a>Js函数式编程</h2><h5 id="编程范式-命令式编程-声明式编程"><a href="#编程范式-命令式编程-声明式编程" class="headerlink" title="-  编程范式:命令式编程/声明式编程"></a>-  编程范式:命令式编程/声明式编程</h5><h5 id="编程范式-面向过程编程-面向对象编程-第一公民-对象-函数式编程-第一公民-函数"><a href="#编程范式-面向过程编程-面向对象编程-第一公民-对象-函数式编程-第一公民-函数" class="headerlink" title="-  编程范式:面向过程编程/面向对象编程(第一公民:对象)/函数式编程(第一公民:函数)"></a>-  编程范式:面向过程编程/面向对象编程(第一公民:对象)/函数式编程(第一公民:函数)</h5><h3 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数:"></a>高阶函数:</h3><ul>
-<li><h4 id="map-映射操作-（回调函数-对每个元素的操作-）"><a href="#map-映射操作-（回调函数-对每个元素的操作-）" class="headerlink" title=".map (映射操作) （回调函数[对每个元素的操作]）"></a>.map (映射操作) （回调函数[对每个元素的操作]）</h4></li>
-<li><h4 id="filter-过滤操作-（回调函数-返回布尔值-）"><a href="#filter-过滤操作-（回调函数-返回布尔值-）" class="headerlink" title=".filter(过滤操作) （回调函数[返回布尔值]）"></a>.filter(过滤操作) （回调函数[返回布尔值]）</h4></li>
-<li><h4 id="reduce-归并操作-回调函数-previousValue-currentValue-用于归并操作-initValue-第一次归并时previousValue的值"><a href="#reduce-归并操作-回调函数-previousValue-currentValue-用于归并操作-initValue-第一次归并时previousValue的值" class="headerlink" title=".reduce(归并操作) (回调函数(previousValue,currentValue)[用于归并操作] ,initValue[第一次归并时previousValue的值])"></a>.reduce(归并操作) (回调函数(previousValue,currentValue)[用于归并操作] ,initValue[第一次归并时previousValue的值])</h4></li>
-</ul>
-<h4 id="函数式编程结合链式编程和箭头函数是非常好用的编程方式-可读性也很高"><a href="#函数式编程结合链式编程和箭头函数是非常好用的编程方式-可读性也很高" class="headerlink" title="函数式编程结合链式编程和箭头函数是非常好用的编程方式,可读性也很高"></a>函数式编程结合链式编程和箭头函数是非常好用的编程方式,可读性也很高</h4><h1 id="表单绑定-v-model"><a href="#表单绑定-v-model" class="headerlink" title="表单绑定 v-model"></a>表单绑定 v-model</h1><ul>
-<li><h4 id="v-model可以把表单input中数据或者textarea中数据与data中的数据进行双向绑定。"><a href="#v-model可以把表单input中数据或者textarea中数据与data中的数据进行双向绑定。" class="headerlink" title="v-model可以把表单input中数据或者textarea中数据与data中的数据进行双向绑定。"></a>v-model可以把表单input中数据或者textarea中数据与data中的数据进行双向绑定。</h4></li>
-</ul>
-<hr>
-<h3 id="v-model双向绑定的本质：v-model是v-bind与v-on的结合-实际包含了这两个操作。"><a href="#v-model双向绑定的本质：v-model是v-bind与v-on的结合-实际包含了这两个操作。" class="headerlink" title="v-model双向绑定的本质：v-model是v-bind与v-on的结合,实际包含了这两个操作。"></a>v-model双向绑定的本质：v-model是v-bind与v-on的结合,实际包含了这两个操作。</h3><p>v-model绑定input radio，可以获取选项的html属性value,由于双向绑定，若给选项绑定的属性设置默认值，选项按钮也会被默认选中.</p>
-<p>v-model绑定input checkbox,<strong>单选框对应布尔值,多选框对应数组类型.</strong></p>
-<p>v-model绑定input select,mutiple,可以多选用数组，不带单选绑定string. selete内部有option,option的value值为绑定的东西</p>
-<hr>
-<p> <strong>v-on事件监听input text,传enent对象,用$event.target.value可以获得表格值。</strong></p>
-<p>​     <strong>v-on事件监听input radio,传enent对象,用$event.target.value可以获得表格值。</strong></p>
-<h5 id="一个小概念-值绑定就是用v-bind绑定value从而简化代码-结合v-for使用可以动态获取从服务器接口获取的信息"><a href="#一个小概念-值绑定就是用v-bind绑定value从而简化代码-结合v-for使用可以动态获取从服务器接口获取的信息" class="headerlink" title="一个小概念:值绑定就是用v-bind绑定value从而简化代码,结合v-for使用可以动态获取从服务器接口获取的信息."></a>一个小概念:值绑定就是用v-bind绑定value从而简化代码,结合v-for使用可以动态获取从服务器接口获取的信息.</h5><h2 id="v-model-修饰符"><a href="#v-model-修饰符" class="headerlink" title="v-model 修饰符"></a>v-model 修饰符</h2><ul>
-<li><h4 id="lazy"><a href="#lazy" class="headerlink" title="lazy"></a>lazy</h4><p>在敲回车或者失去焦点的时候才会进行变量更新.</p>
 </li>
-<li><h4 id="number"><a href="#number" class="headerlink" title="number"></a>number</h4><p>默认v-model将输入设置为string类型,使用这个修饰符会自动将被更新的变量类型设置为number类型.</p>
+</ul>
+<ol>
+<li>JDK动态代理<ul>
+<li>JDK动态代理是对“装饰者”设计模式的简化。使用前提：必须有接口。<ul>
+<li>目标类：接口+实现类</li>
+<li>切面类：用于存放通知</li>
+<li>工厂类：编写工厂生成代理<ul>
+<li>工厂类组合进目标类和切面类，利用JDK提供的代理工具proxy动态生成代理类。</li>
+<li>proxy.newInstance(loader,interfaces,h);<ul>
+<li>loader:类加载器，运行时创建，任何类都需要类加载器将其加载到内存。一般来说，当前类,class.getClassLoader(); 目标类实例用getClass().getClassLoader();一般一样。</li>
+<li>interfaces：代理类需要实现的所有接口。<ul>
+<li>方式一：目标类实例.getClass.getInterfaces();注意只能获得当前类的接口，既直接继承的接口。间接继承的不获得。</li>
+<li>方式二：new Class[] {userService.class},例如JDBC驱动—&gt;DriverManager-&gt;获得Connection接口</li>
+<li>参数三：InvocationHandler 处理类，接口，必须实现类，一般采用匿名内部类。<ul>
+<li>提供Invoke方法，代理类的每一个方法的执行的时候，都将调用调用一次invoke<ul>
+<li>参数一：Object prox：代理对象。</li>
+<li>参数二：Method method：代理对象当前执行方法的描述对象（反射）。<ul>
+<li>执行方法名：method.getName();</li>
+<li>执行方法：method.invoke();</li>
+</ul>
 </li>
-<li><h4 id="trim"><a href="#trim" class="headerlink" title="trim"></a>trim</h4><p>自动去除读入内容左右两边的空格,类似于Python的strip.</p>
+<li>参数三：Object[] args：方法实际参数。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CGLIG字节码增强<ul>
+<li>没有接口，只有实现类。</li>
+<li>采用字节码增强框架CGLIB，在运行时创建目标类的子类，从而对目标类进行增强。</li>
+<li>导入JAR包<ul>
+<li>自己导包：CGLIB</li>
+<li>依赖：ASM</li>
+</ul>
+</li>
+<li>CGLIB代理工厂类写法<ol>
+<li>核心类：Enhancer</li>
+<li>确定父类enhancer.setSuperclass(tql.getClass());</li>
+<li>设置回调函数enhancer.setCallback(new MethodInterceptor())相当于InvocationHandler接口<ul>
+<li>参数一、参数二、参数三与Invoke一样</li>
+<li>参数四：方法的代理</li>
+</ul>
+</li>
+<li>创建代理，create<h4 id="Spring半自动代理"><a href="#Spring半自动代理" class="headerlink" title="Spring半自动代理"></a>Spring半自动代理</h4></li>
+</ol>
+</li>
+<li>AOP联盟规定的通知类型：<ul>
+<li>前置通知<ul>
+<li>在目标方法执行前实施增强。</li>
+<li>可以阻止目标方法的执行。</li>
+</ul>
+</li>
+<li>后置通知<ul>
+<li>在目标方法执行后实施增强。</li>
+<li>可以获得返回值。</li>
+</ul>
+</li>
+<li>环绕通知<ul>
+<li>主要掌握环绕通知。</li>
+<li>必须手动执行目标方法。</li>
+<li>在目标方法执行前后实施增强。</li>
+</ul>
+</li>
+<li>异常抛出通知。<ul>
+<li>在方法抛出异常后实施增强。</li>
+</ul>
+</li>
+<li>引介通知<ul>
+<li>在目标类中添加一些新的方法和通知。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>让Spring创建代理对象，从Spring容器中手动的获取代理对象。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>导入JAR包</p>
+<ul>
+<li>核心：4+1</li>
+<li>AOP：AOP联盟（规范）、Spring AOP（实现）</li>
+</ul>
+</li>
+<li><p>切面类中确定通知，需要实现不同接口，接口就是规范，从而确定方法名称。</p>
+</li>
+<li><p>环绕通知实现MethodInterceptor接口。</p>
+</li>
+<li><p>在配置文件中开始配置相关类</p>
+<ul>
+<li>创建目标类</li>
+<li>创建切面类</li>
+<li>创建代理类<ul>
+<li>使用工厂BeanFactory，底层调用getObject()方法返回特殊bean</li>
+<li>ProxyFactoryBean 用于创建代理工厂Bean，生成特殊代理对象。<ul>
+<li>属性注入</li>
+<li>interfaces<ul>
+<li>是数组，通过array可以设置多个值<ul>
+<li>只有一个值的时候，Value=””</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>target:确定目标类</li>
+<li>interceptorNames： 通知切面类的名称，类型String[]，用一个就设置value就行。</li>
+<li>optimize：强制使用CGLIB.<ul>
+<li>底层机制：如果目标有接口采用jdk动态代理</li>
+<li>如果没有接口采用CGLIB字节码增强</li>
+<li>如果有optimize=true就强制使用CGLIB字节码增强<h4 id="SpringAOP全自动编程"><a href="#SpringAOP全自动编程" class="headerlink" title="SpringAOP全自动编程"></a>SpringAOP全自动编程</h4></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>从Spring容器中获得目标类，如果配置Aop，Spring将自动生成代理。</p>
+</li>
+<li><p>要确定目标类，AspectJ切入点表达式，导入JAR包：AspectJ</p>
+</li>
+<li><p>XML配置：导入命名空间aop schema</p>
+</li>
+<li><p>使用<a href="aop:config" target="_blank" rel="noopener">aop:config</a>进行配置</p>
+<ul>
+<li>属性proxy-target-class改成true可以声明使用CGLIB进行代理。</li>
+<li><a href="aop:PointCut" target="_blank" rel="noopener">aop:PointCut</a> 切入点，从目标对象获得具体方法</li>
+<li><a href="aop:advisor" target="_blank" rel="noopener">aop:advisor</a>特殊的切面，只有一个通知和一个切入点<ul>
+<li>advise-ref 通知引用</li>
+<li>pointcut-ref 切入点引用</li>
+<li>将通知应用到切入点</li>
+</ul>
+</li>
+<li>切入点表达式<ul>
+<li>execution(* com.hhr.aop.spring_aop.TqlImpl.<em>.</em>(..))</li>
+<li>选择方法 返回值任意 包 类名任意 方法名任意 参数任意<h4 id="Aspect"><a href="#Aspect" class="headerlink" title="Aspect"></a>Aspect</h4></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>AspectJ是一个基于Java语言的Aop框架</p>
+</li>
+<li><p>spring2.0之后新增了对切点表达式的支持</p>
+</li>
+<li><p>@AspectJ是1.5新增功能，通过JDK5注解技术，允许直接在Bean类中定义切面，新版本Spring框架建议使用AspectJ方式来开发AOP。</p>
+</li>
+<li><p>主要用途：自定义开发</p>
+</li>
+<li><h3 id="切入点表达式【掌握】"><a href="#切入点表达式【掌握】" class="headerlink" title="切入点表达式【掌握】"></a>切入点表达式【掌握】</h3><ul>
+<li>语法：execution(修饰符 返回值 包 类.方法（参数） throws 异常)<ul>
+<li>修饰符，一般省略<ul>
+<li>public 公共方法，* 任意</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>void 没有返回值</li>
+<li>String 返回支付穿</li>
+<li>* 任意</li>
+</ul>
+</li>
+<li>包[省略]<ul>
+<li>com.hhr.org 固定包</li>
+<li>com.hhr.org.*.service  org下面任意子包</li>
+<li>com.hhr.org.. org下面所有子包（含自己）</li>
+<li>com.hhr.org.*.service.. org下面任意子包，固定目录service下面的任意子包</li>
+</ul>
+</li>
+<li>类[省略]<ul>
+<li>userServiceImpl 指定类</li>
+<li>*Impl 以Impl结尾</li>
+<li>User* 以User开头</li>
+<li>* 任意</li>
+</ul>
+</li>
+<li>方法 不能省略<ul>
+<li>addUser 固定方法</li>
+<li>add* 以add开头</li>
+<li>*Do以Do结尾</li>
+<li>* 任意</li>
+</ul>
+</li>
+<li>（参数）<ul>
+<li>() 无参</li>
+<li>(int) 一个整型</li>
+<li>(int,int) 两个</li>
+<li>(参数任意)</li>
+</ul>
+</li>
+<li>throws 可省略，一般不写</li>
+</ul>
+</li>
+<li>其他表达式<ul>
+<li>Within 匹配包或子包中的方法</li>
+<li>this 匹配实现接口的代理对象中的方法</li>
+<li>target 匹配实现接口的目标对象中的方法</li>
+<li>args 匹配参数格式符合标准的方法</li>
+<li>bean 对指定的bean所有的方法<ul>
+<li>bean(userServiceId)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="AspectJ-通知类型"><a href="#AspectJ-通知类型" class="headerlink" title="AspectJ 通知类型"></a>AspectJ 通知类型</h3><ul>
+<li>Aop联盟定义通知类型，具有特定的接口，必须实现，从而确定方法名称。</li>
+<li>AspectJ 通知类型，只定义了类型名称，以及方法格式。</li>
+<li>通知类型个数：六种，知道五种掌握一种。<ul>
+<li>before  前置通知<ul>
+<li>在方法执行前执行，可以抛出异常阻止方法运行。</li>
+<li>用于各种校验</li>
+</ul>
+</li>
+<li>afterReturning 后置通知<ul>
+<li>方法正常返回后执行，如果方法中抛出异常，通知就无法执行</li>
+<li>用于常规数据处理</li>
+</ul>
+</li>
+<li>around 环绕通知<ul>
+<li>方法执行前后分别执行，可以阻止方法的执行</li>
+<li>十分强大，可以做任何事情</li>
+</ul>
+</li>
+<li>arterThrowing 抛出异常通知<ul>
+<li>方法抛出异常后执行，如果方法没有抛出异常，无法执行</li>
+<li>可用于包装异常信息</li>
+</ul>
+</li>
+<li>after 最终通知<ul>
+<li>方法执行完毕后执行，无论方法中是否出现异常</li>
+<li>用于清理现场</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li></li>
+<li><h5 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">环绕</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    前置before</span><br><span class="line">    手动执行目标方法</span><br><span class="line">    后置afterReturning</span><br><span class="line">  &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    抛出异常 arterThrowing</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">finally</span>&#123;</span><br><span class="line">    最终after</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>导入Jar包</p>
+<ul>
+<li>Aop联盟规范</li>
+<li>Spring AOP实现</li>
+<li>aspect 规范</li>
+<li>Spring aspect 实现</li>
+</ul>
+</li>
+<li><h4 id="基于XML配置"><a href="#基于XML配置" class="headerlink" title="基于XML配置"></a>基于XML配置</h4><ol>
+<li>目标类：接口+实现</li>
+<li>切面类： 编写多个通知，采用AspectJ通知名称任意（方法名任意）</li>
+<li>AOP编程，将通知应用到目标类</li>
+<li>测试</li>
+</ol>
+<ul>
+<li><p>aop:aspect 将切面类声明为切面从而获得通知（方法）</p>
+<ul>
+<li><p>有个tag叫做declear-parents 叫做引介，已经不用他了</p>
+</li>
+<li><p>pointcut 声明一个切入点，所有的通知都可以使用。</p>
+<ul>
+<li>expression 切入点表达式，用于选择切入点</li>
+<li>id，切入点的名字，用于其他通知引用</li>
+</ul>
+</li>
+<li><p>aop:before，前置通知</p>
+<ul>
+<li>method：通知及方法名。</li>
+<li>pointcut：切入点表达式，此表达式只能当前的通知使用。</li>
+<li>pointcut-ref：切入点引用，可以与其他通知共享切入点。</li>
+<li>通知方法可以有参数：JoinPoint<ul>
+<li>通知方法格式：public void myBefore(JoinPoint joinPoint)</li>
+<li>用于描述连接点（目标方法),获得目标方法的各种信息，比如方法名</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>aop:afterReturning，后置通知</p>
+<ul>
+<li>参数一：joinPoint 同上</li>
+<li>目标方法后执行，获得返回值<ul>
+<li>使用returning参数<ul>
+<li>通知方法第二个参数的名称</li>
+<li>类型为Object，参数名returning配置</li>
+</ul>
+</li>
+<li>通知方法格式： </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>aop:around</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法名任意</span></span><br><span class="line"><span class="comment">//第一个参数是JoinPoint的子类ProceedingJoinPoint</span></span><br><span class="line"><span class="comment">//必须抛出异常</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">myAround</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"环绕前"</span>);</span><br><span class="line">        <span class="comment">//手动设定执行点，joinPoint.proceed执行目标方法，返回值是Object对象</span></span><br><span class="line">        Object obj = joinPoint.proceed();</span><br><span class="line">        System.out.println(<span class="string">"环绕后"</span>);</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>aop:afterThrowing</p>
+<ul>
+<li>通知方法格式：public void myAfterThrowing(JoinPoint joinPoint,throwable e(可有可无)))<ul>
+<li>参数一：连接点描述对象</li>
+<li>参数二：获得异常信息，类型throwable，参数名由throwing=”e” 确定. </li>
+<li>其他的参数可选</li>
+</ul>
+</li>
+<li>throwing属性填通知方法的第二个参数的名称</li>
+</ul>
+</li>
+<li><p>aop:after，最终通知</p>
+<ul>
+<li>格式public void myAfter(JoinPoint joinPoint（可有可无）)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="基于注解配置"><a href="#基于注解配置" class="headerlink" title="基于注解配置"></a>基于注解配置</h4><ul>
+<li><p>替换bean</p>
+<ul>
+<li>Bean加载 @Component @Service @Controller @Repository</li>
+<li>ClasspathScan 设置XML，加入Context schema.</li>
+</ul>
+</li>
+<li><p>替换Aop</p>
+</li>
+<li><p>声明切面类@Aspect</p>
+<ul>
+<li>声明Before通知，参数里写expression切入点表达式</li>
+</ul>
+</li>
+<li><p>进行aop:aspectj-autoproxy标签设置，声明开启自动代理</p>
+</li>
+<li><p>如果不想每次都写私有的切入点表达式，就声明一个公共的切入点表达式方法 </p>
+<ul>
+<li><p>写入一个随便的方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Pointcut</span>(<span class="string">"execution(* com.hhr.aop.annoaop.TqlImpl.*(..))"</span>)</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointCut</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Before</span>(<span class="string">"myPointCut()"</span>)</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">myBefore</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"前置通知：是他 是他 是他 the"</span> + joinPoint.getSignature().getName());</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他通知方法同上，在注解中value属性可以写切入点，如果有多个值就加{}表示数组，如果只有一个就写一个就行，然后用returning和throwing等属性名字写后置通知或异常抛出通知的参数名</p>
+</li>
+</ul>
+</li>
+<li><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>@Aspect声明切面类</li>
+<li>@Before前置</li>
+<li>@afterReturning</li>
+<li>@Around</li>
+<li>@afterReturning</li>
+<li>@after</li>
+<li>切入点<ul>
+<li>@Pointcut修饰方法private void xxx(){}之后用方法名调用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -336,7 +655,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/17/Vue学习笔记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/21/Spring-AOP学习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -350,18 +669,9 @@
   
 <nav id="article-nav">
   
-    <a href="../../21/Spring-AOP学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Spring-AOP学习
-        
-      </div>
-    </a>
   
-  
-    <a href="../Vue学习笔记-Webpack-3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue学习笔记-Webpack</div>
+    <a href="../../17/Vue学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
